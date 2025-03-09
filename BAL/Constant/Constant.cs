@@ -12,7 +12,7 @@ namespace BAL.Constants
     public static class ApiMessages
     {
         public static readonly string API001 = "Failed to generate a unique ID after multiple attempts.";
-        public static readonly string API002 = "NodeId must be between 10 and 99.";
+        public static readonly string API002 = "InstanceId must be between 10 and 99.";
         public static readonly string API003 = "No products available.";
         public static readonly string API004 = "Product added successfully.";
         public static readonly string API005 = "Failed to add product. Please try again later.";

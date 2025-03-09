@@ -27,12 +27,8 @@ namespace BAL.Services
                 _sequenceCounter = (_sequenceCounter + 1) % 100;
                 var sequenceComponent = _sequenceCounter.ToString(ApiConstant.TwoDigitFormat);
 
-                // Generate a random 2-digit number (ensure it doesn't start with 0)
-                var random = new Random();
-                var randomComponent = random.Next(1, 100).ToString(ApiConstant.TwoDigitFormat);
-
                 // Combine all components to form the 6-digit ID
-                int uniqueId = Convert.ToInt32($"{_instanceId}{timestampComponent}{randomComponent}");
+                int uniqueId = Convert.ToInt32($"{_instanceId}{timestampComponent}{sequenceComponent}");
 
                 return uniqueId; // This will always be a 6-digit string with NodeId as the first two digits
             }

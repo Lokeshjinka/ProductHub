@@ -20,7 +20,7 @@ namespace BAL.Services
         public int GenerateUniqueId()
         {
             int uniqueId = 0;
-            int attempts = 1000;
+            int attempts = 0;
             bool uniqueIdGenerated = false;
             while (!uniqueIdGenerated && attempts < ApiConstant.IdGenerationMaxAttempts)
             {
